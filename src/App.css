@@ -1,0 +1,110 @@
+*{
+  padding:0;
+  margin:0;
+}
+
+
+.game{
+  height:100vh;
+  background-color: #1b0d49;
+}
+
+
+.game .image{
+  height:50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game .image img{
+  height:35vh;
+}
+
+.game .bottom{
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+  align-items: center;
+  padding-top:30px;
+}
+
+
+.game .bottom .question{
+  color:white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:70%;
+  margin-bottom: 15px;
+}
+.game .bottom .options{
+  width:70%;
+}
+
+.game .bottom .question h1{
+  font-family: sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.06em;
+  font-weight: bold;
+  width:100%;
+  padding:10px;
+  border:2px solid rgb(183, 192, 50);
+  text-align: center;
+  border-radius: 20px;
+}
+
+.game .bottom .optiontop{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  width: 100%;
+  margin-bottom: 2px;
+
+}
+
+.game .bottom .optiontop h1{
+  font-family: sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.06em;
+  font-weight: bold;
+  padding:10px;
+  border:2px solid rgb(183, 192, 50);
+  border-radius: 20px;
+  width:430px;
+  color:white;
+}
+
+
+.game .bottom .optionbottom{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.game .bottom .optionbottom h1{
+  font-family: sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.06em;
+  font-weight: bold;
+  padding:10px;
+  border:2px solid rgb(183, 192, 50);
+  border-radius: 20px;
+  width:430px;
+  color:white;
+
+}
+
+.game .bottom .options span{
+  color:rgb(148, 113, 18);
+}
+
+.game .bottom .options h1:hover{
+  cursor:pointer;
+}
