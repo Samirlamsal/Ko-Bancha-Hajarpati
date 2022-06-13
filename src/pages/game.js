@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import img from '../images/kbh.png'
+import { GrNext } from 'react-icons/gr';
 
 
 const Game = () =>{
@@ -37,23 +38,28 @@ const Game = () =>{
     },
 
     ]
+    const initialcolor = {
+        option1color:'transparent',
+        option2color:'transparent',
+        option3color:'transparent',
+        option4color:'transparent'
+    }
     const [gamelevel, setgamelevel] = useState(0)
-    const [color, setcolor] = useState(
-        {
-            option1color:'transparent',
-            option2color:'transparent',
-            option3color:'transparent',
-            option4color:'transparent'
-        }
-    )
+    const [color, setcolor] = useState(initialcolor)
+    const changelevel = () =>{
+        setgamelevel(gamelevel+1)
+        setcolor(initialcolor)
+        setflag(data[gamelevel+1].answer)
+        console.log(gamelevel+1)
+    }
 
-    const [flag, setflag] = useState(data.answer)
+    const [flag, setflag] = useState(data[gamelevel].answer)
     return(
         <div className='game'>
-            <div className='next' onClick={(()=>{
-                setgamelevel(gamelevel+1)
-            })}>
-                <button>next</button>
+            <div className='next' onClick={()=>{
+                changelevel()
+            }}>
+                <button><h3><GrNext/></h3></button>
 
             </div>
             <div className='top'>
@@ -75,7 +81,6 @@ const Game = () =>{
                 
                         }
                         else{
-                            console.log(flag)
                             if(flag===data[gamelevel].option2){
                                 setcolor({option2color:'green',option1color:'red'})
                             }
