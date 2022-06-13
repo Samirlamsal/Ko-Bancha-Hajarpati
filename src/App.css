@@ -108,3 +108,22 @@
 .game .bottom .options h1:hover{
   cursor:pointer;
 }
+
+.game .next{
+  display: flex;
+  justify-content: flex-end;
+  padding:10px;
+  margin-right:30px
+}
+
+.game .next button{
+  padding:10px 20px;
+  background-color: green;
+  border:none;
+  color:white;
+
+}
+
+.game .next button:hover{
+  cursor:pointer;
+}
