@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import img from '../images/kbh.png'
 import { GrNext } from 'react-icons/gr';
+import CountdownTimer from '../components/countdownTimer';
+import { FaUserFriends } from 'react-icons/fa';
 
 
 const Game6 = () =>{
@@ -27,7 +29,7 @@ const Game6 = () =>{
 
     
     const data =[    {
-        ,
+        
         "ques": "तल दिइएका मध्य कुन चाँहि स्टेशनरी सामान हो ?",
         "answer": "कलम",
         "option1": "आइसक्रिम",
@@ -135,100 +137,100 @@ const Game6 = () =>{
         "option4": "December 30,2016"
     }
     ]
-    const [level1, setlevel1] = useState([])
-    const [level2, setlevel2] = useState([])
-    const [level3, setlevel3] = useState([])
-    const [level4, setlevel4] = useState([])
-    const [level5, setlevel5] = useState([])
-    const [level6, setlevel6] = useState([])
-    const [level7, setlevel7] = useState([])
-    const [level8, setlevel8] = useState([])
-    const [level9, setlevel9] = useState([])
-    const [level10, setlevel10] = useState([])
-    const [level11, setlevel11] = useState([])
-    const [level12, setlevel12] = useState([])
+    // const [level1, setlevel1] = useState([])
+    // const [level2, setlevel2] = useState([])
+    // const [level3, setlevel3] = useState([])
+    // const [level4, setlevel4] = useState([])
+    // const [level5, setlevel5] = useState([])
+    // const [level6, setlevel6] = useState([])
+    // const [level7, setlevel7] = useState([])
+    // const [level8, setlevel8] = useState([])
+    // const [level9, setlevel9] = useState([])
+    // const [level10, setlevel10] = useState([])
+    // const [level11, setlevel11] = useState([])
+    // const [level12, setlevel12] = useState([])
 
-    const [datas, setdatas] = useState([])
+    // const [datas, setdatas] = useState([])
     
 
-    useEffect(() => {
-        fetch('http://127.0.0.1:8000/level1/')
-            .then(response => response.json())
-            .then(data => {
-                setlevel1(data)
+    // useEffect(() => {
+    //     fetch('http://127.0.0.1:8000/level1/')
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             setlevel1(data)
                 
-            }
-            )
+    //         }
+    //         )
 
-            fetch('http://127.0.0.1:8000/level2/')
-            .then(response => response.json())
-            .then(data => {
-                setlevel2(data)
-            }
-            )
-            fetch('http://127.0.0.1:8000/level3/')
-            .then(response => response.json())
-            .then(data => {
-                setlevel3(data)
-            }
-            )
-            fetch('http://127.0.0.1:8000/level4/')
-            .then(response => response.json())
-            .then(data => {
-                setlevel4(data)
-            }
-            )
-            fetch('http://127.0.0.1:8000/level5/')
-            .then(response => response.json())
-            .then(data => {
-                setlevel5(data)
-            }
-            )
-            fetch('http://127.0.0.1:8000/level6/')
-            .then(response => response.json())
-            .then(data => {
-                setlevel6(data)
-            }
-            )
-            fetch('http://127.0.0.1:8000/level7/')
-            .then(response => response.json())
-            .then(data => {
-                setlevel7(data)
-            }
-            )
-            fetch('http://127.0.0.1:8000/level8/')
-            .then(response => response.json())
-            .then(data => {
-                setlevel8(data)
-            }
-            )
-            fetch('http://127.0.0.1:8000/level9/')
-            .then(response => response.json())
-            .then(data => {
-                setlevel9(data)
-            }
-            )
-            fetch('http://127.0.0.1:8000/level10/')
-            .then(response => response.json())
-            .then(data => {
-                setlevel10(data)
-            }
-            )
-            fetch('http://127.0.0.1:8000/level11/')
-            .then(response => response.json())
-            .then(data => {
-                setlevel11(data)
-            } 
-            )
-            fetch('http://127.0.0.1:8000/level12/')
-            .then(response => response.json())
-            .then(data => {
-                setlevel12(data)
-            }
-            )
+    //         fetch('http://127.0.0.1:8000/level2/')
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             setlevel2(data)
+    //         }
+    //         )
+    //         fetch('http://127.0.0.1:8000/level3/')
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             setlevel3(data)
+    //         }
+    //         )
+    //         fetch('http://127.0.0.1:8000/level4/')
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             setlevel4(data)
+    //         }
+    //         )
+    //         fetch('http://127.0.0.1:8000/level5/')
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             setlevel5(data)
+    //         }
+    //         )
+    //         fetch('http://127.0.0.1:8000/level6/')
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             setlevel6(data)
+    //         }
+    //         )
+    //         fetch('http://127.0.0.1:8000/level7/')
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             setlevel7(data)
+    //         }
+    //         )
+    //         fetch('http://127.0.0.1:8000/level8/')
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             setlevel8(data)
+    //         }
+    //         )
+    //         fetch('http://127.0.0.1:8000/level9/')
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             setlevel9(data)
+    //         }
+    //         )
+    //         fetch('http://127.0.0.1:8000/level10/')
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             setlevel10(data)
+    //         }
+    //         )
+    //         fetch('http://127.0.0.1:8000/level11/')
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             setlevel11(data)
+    //         } 
+    //         )
+    //         fetch('http://127.0.0.1:8000/level12/')
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             setlevel12(data)
+    //         }
+    //         )
             
         
-    }, []);
+    // }, []);
     // console.log(level1[0])
     // console.log(level2[0])
     // console.log(level3[0])
@@ -318,19 +320,53 @@ const Game6 = () =>{
         'a':'green'
 
     }
+
+    const [button50visible, setbutton50visible] = useState(true)
+    const [buttonexpvisible, setbuttonexpvisible] = useState(true)
+    const THREE_DAYS_IN_MS = 60 * 1000;
+    const NOW_IN_MS = new Date().getTime();
+  
+    const dateTimeAfterThreeDays = NOW_IN_MS + THREE_DAYS_IN_MS;
+    const [timer, settimer] = useState(true)
     const [moneybg, setmoneybg] = useState(initialbg)
     const [flag, setflag] = useState(data[gamelevel].answer)
     return(
         <div className='game'>
-            <div className='next' onClick={()=>{
+            {timer===true &&
+                <CountdownTimer targetDate={dateTimeAfterThreeDays} />
+            }
+                <div className="lifeline">
+                {button50visible===true &&
+                    <div className="fifty" onClick={()=>setbutton50visible(false)}>
+                            <h2>50-50</h2>
+                    </div>
+                    }
+                    {button50visible===false &&
+                    <div className="fifty" onClick={()=>setbutton50visible(false)} style={{'opacity':0.5, 'cursor':'cursor', 'backgroundColor':'red'}}>
+                            <h2>50-50</h2>
+                    </div>
+                    }
+                        {buttonexpvisible===true &&
+                        <div className="expert" onClick={()=>setbuttonexpvisible(false)} >
+                            <FaUserFriends/>
+                        </div>
+                    }
+                        {buttonexpvisible===false &&
+                        <div className="expert" onClick={()=>setbuttonexpvisible(false)} style={{'opacity':0.5, 'cursor':'cursor', 'backgroundColor':'red'}}>
+                            <FaUserFriends/>
+                        </div>
+                    }
+
+                </div>
+            <div className='next'>
+                <button onClick={()=>{
                 changelevel()
-            }}>
-                <button><h3><GrNext/></h3></button>
+            }}><h3><GrNext/></h3></button>
 
             </div>
             <div className='top'>
             <div className='image'>
-                    <img src={img} alt='logo' />
+            <a href="/"><img src={img} alt='logo' /></a>
                 </div>
             </div>
             <div className='level'>

@@ -44,9 +44,9 @@
 }
 
 .game .bottom .question h1{
-  font-family: sans-serif;
-  font-size: 18px;
-  letter-spacing: 0.06em;
+  font-family: "Copperplate Gothic";
+  font-size: 12px;
+  letter-spacing: 0.10em;
   font-weight: bold;
   width:100%;
   padding:10px;
@@ -67,9 +67,9 @@
 }
 
 .game .bottom .optiontop h1{
-  font-family: sans-serif;
-  font-size: 18px;
-  letter-spacing: 0.06em;
+  font-family: Copperplate Gothic;
+  font-size: 12px;
+  letter-spacing: 0.10em;
   font-weight: bold;
   padding:10px;
   border:2px solid rgb(183, 192, 50);
@@ -89,9 +89,9 @@
 }
 
 .game .bottom .optionbottom h1{
-  font-family: sans-serif;
-  font-size: 18px;
-  letter-spacing: 0.06em;
+  font-family: Copperplate Gothic;
+  font-size: 12px;
+  letter-spacing: 0.10em;
   font-weight: bold;
   padding:10px;
   border:2px solid rgb(183, 192, 50);
@@ -138,11 +138,115 @@
 }
 
 .game .level h1{
-  font-family:'Times New Roman', Times, serif;
-  font-size: 20px;
+  font-family:Copperplate Gothic;
+  font-size: 16px;
   color:rgb(228, 227, 233);
   border:2px solid rgb(120, 139, 192);
   padding:5px 25px;
-  margin:5px 0;
+  margin:7px 0;
   border-radius: 15px;
+}
+
+.show-counter{
+  position: absolute;
+  top:0;
+  right:48%;
+  color:rgb(153, 146, 160);
+  padding:20px;
+  font-family:Copperplate Gothic;
+  font-size: 25px;
+}
+
+.expired{
+  position: absolute;
+  top:0;
+  right:48%;
+  color:rgb(153, 146, 160);
+  padding:20px;
+  font-family:Copperplate Gothic;
+
+}
+
+.lifeline{
+  position: absolute;
+  right:0;
+  top:35%;
+  padding:30px;
+ 
+
+}
+
+.lifeline .fifty{
+  padding:10px;
+  border:2px solid rgb(179, 123, 176);
+  border-radius: 50px;
+  color:white;
+  margin-bottom: 30px;
+  height:40px;
+  width:100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Copperplate Gothic;
+  font-size: 13px;
+  background-color: #170942;
+}
+
+
+.lifeline .fifty:hover{
+  cursor:pointer;
+  background-color: #120635;
+
+}
+
+.lifeline .expert{
+  padding:10px;
+  border:2px solid rgb(179, 123, 176);
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:white;
+  height:40px;
+  width:100px;
+  font-size: 35px;
+  background-color: #170942;
+
+}
+
+.lifeline .expert:hover{
+  cursor: pointer;
+  background-color: #120635;
+}
+
+
+.play{
+  border:3px solid rgb(197, 187, 187);
+  color:white;
+  font-family: Copperplate Gothic;
+  padding:10px;
+  border-radius: 35px;
+  width:120px;
+  text-align: center;
+  
+}
+
+.play:hover{
+  cursor: pointer;
+}
+
+.modal{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+
+.modal a{
+  margin-right: 20px;
+  color:rgb(154, 140, 182);
+  font-family: Copperplate Gothic;
+  font-size: 10px;
+  letter-spacing: 0.2em;
 }

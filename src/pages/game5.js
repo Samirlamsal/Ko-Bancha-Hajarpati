@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import img from '../images/kbh.png'
 import { GrNext } from 'react-icons/gr';
+import CountdownTimer from '../components/countdownTimer';
+import { FaUserFriends } from 'react-icons/fa';
 
 
 const Game5 = () =>{
@@ -27,7 +29,7 @@ const Game5 = () =>{
 
     
     const data =[{
-        "id": 8,
+        "id": 1,
         "ques": "झुम्का भन्नाले के बुझिन्छ?",
         "answer": "कानको गहना",
         "option1": "कानको गहना",
@@ -36,7 +38,7 @@ const Game5 = () =>{
         "option4": "हात्तीको चाल"
     },
     {
-        "id": 6,
+        "id": 2,
         "ques": "Which god is worshiped in the festival of Chhath?",
         "answer": "Surya",
         "option1": "Indra",
@@ -45,7 +47,7 @@ const Game5 = () =>{
         "option4": "Surya"
     },
     {
-        "id": 6,
+        "id": 3,
         "ques": "Which language is spoken more after Nepali language in Nepal?",
         "answer": "Maithili",
         "option1": "Newari",
@@ -54,7 +56,7 @@ const Game5 = () =>{
         "option4": "Maithili"
     },
     {
-        "id": 5,
+        "id": 4,
         "ques": "टाउकोको एक भागमा मात्र असर पार्ने खालको टाउको दुखाइलाई के भनिन्छ?",
         "answer": "माइग्रेन",
         "option1": "एम्नेसिया",
@@ -81,7 +83,7 @@ const Game5 = () =>{
         "option4": "Nuwakot"
     },
     {
-        "id": 5,
+        "id": 7,
         "ques": "Which fruit is known as the king of fruit?",
         "answer": "Mango",
         "option1": "Grapes",
@@ -90,7 +92,7 @@ const Game5 = () =>{
         "option4": "Mango"
     },
     {
-        "id": 5,
+        "id": 8,
         "ques": "How many trade points have been opened between Nepal and India?",
         "answer": "27",
         "option1": "25",
@@ -99,7 +101,7 @@ const Game5 = () =>{
         "option4": "28"
     },
     {
-        "id": 5,
+        "id": 9,
         "ques": "अलैँची खेतीका लागी उपयुक्त तापक्रम कति हो ?",
         "answer": "८ देखि २० डि.से",
         "option1": "८ देखि १० डि.से",
@@ -108,7 +110,7 @@ const Game5 = () =>{
         "option4": "८ देखि २० डि.से"
     },
     {
-        "id": 5,
+        "id": 10,
         "ques": "तोरीको लागि प्रसिद्ध ठाउँ कुन हो?",
         "answer": "चितवन",
         "option1": "झापा",
@@ -117,7 +119,7 @@ const Game5 = () =>{
         "option4": "डोटी"
     },
     {
-        "id": 5,
+        "id": 11,
         "ques": "पुरुषभन्दा महिला बढी साक्षर भएको देश कुन हो ?",
         "answer": "हंगेरी",
         "option1": "पानामा",
@@ -126,7 +128,7 @@ const Game5 = () =>{
         "option4": "चिली"
     },
     {
-        "id": 5,
+        "id": 12,
         "ques": "नेपाल सरकारले कुन दिनलाई राष्ट्रिय पत्रकारिता दिवसको रूपमा मनाउने निर्णय गरेको छ?",
         "answer": "बैँशाख २४",
         "option1": "जेठ २४",
@@ -135,100 +137,100 @@ const Game5 = () =>{
         "option4": "बैँशाख २४"
     }
     ]
-    const [level1, setlevel1] = useState([])
-    const [level2, setlevel2] = useState([])
-    const [level3, setlevel3] = useState([])
-    const [level4, setlevel4] = useState([])
-    const [level5, setlevel5] = useState([])
-    const [level6, setlevel6] = useState([])
-    const [level7, setlevel7] = useState([])
-    const [level8, setlevel8] = useState([])
-    const [level9, setlevel9] = useState([])
-    const [level10, setlevel10] = useState([])
-    const [level11, setlevel11] = useState([])
-    const [level12, setlevel12] = useState([])
+    // const [level1, setlevel1] = useState([])
+    // const [level2, setlevel2] = useState([])
+    // const [level3, setlevel3] = useState([])
+    // const [level4, setlevel4] = useState([])
+    // const [level5, setlevel5] = useState([])
+    // const [level6, setlevel6] = useState([])
+    // const [level7, setlevel7] = useState([])
+    // const [level8, setlevel8] = useState([])
+    // const [level9, setlevel9] = useState([])
+    // const [level10, setlevel10] = useState([])
+    // const [level11, setlevel11] = useState([])
+    // const [level12, setlevel12] = useState([])
 
-    const [datas, setdatas] = useState([])
+    // const [datas, setdatas] = useState([])
     
 
-    useEffect(() => {
-        fetch('http://127.0.0.1:8000/level1/')
-            .then(response => response.json())
-            .then(data => {
-                setlevel1(data)
+    // useEffect(() => {
+    //     fetch('http://127.0.0.1:8000/level1/')
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             setlevel1(data)
                 
-            }
-            )
+    //         }
+    //         )
 
-            fetch('http://127.0.0.1:8000/level2/')
-            .then(response => response.json())
-            .then(data => {
-                setlevel2(data)
-            }
-            )
-            fetch('http://127.0.0.1:8000/level3/')
-            .then(response => response.json())
-            .then(data => {
-                setlevel3(data)
-            }
-            )
-            fetch('http://127.0.0.1:8000/level4/')
-            .then(response => response.json())
-            .then(data => {
-                setlevel4(data)
-            }
-            )
-            fetch('http://127.0.0.1:8000/level5/')
-            .then(response => response.json())
-            .then(data => {
-                setlevel5(data)
-            }
-            )
-            fetch('http://127.0.0.1:8000/level6/')
-            .then(response => response.json())
-            .then(data => {
-                setlevel6(data)
-            }
-            )
-            fetch('http://127.0.0.1:8000/level7/')
-            .then(response => response.json())
-            .then(data => {
-                setlevel7(data)
-            }
-            )
-            fetch('http://127.0.0.1:8000/level8/')
-            .then(response => response.json())
-            .then(data => {
-                setlevel8(data)
-            }
-            )
-            fetch('http://127.0.0.1:8000/level9/')
-            .then(response => response.json())
-            .then(data => {
-                setlevel9(data)
-            }
-            )
-            fetch('http://127.0.0.1:8000/level10/')
-            .then(response => response.json())
-            .then(data => {
-                setlevel10(data)
-            }
-            )
-            fetch('http://127.0.0.1:8000/level11/')
-            .then(response => response.json())
-            .then(data => {
-                setlevel11(data)
-            } 
-            )
-            fetch('http://127.0.0.1:8000/level12/')
-            .then(response => response.json())
-            .then(data => {
-                setlevel12(data)
-            }
-            )
+    //         fetch('http://127.0.0.1:8000/level2/')
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             setlevel2(data)
+    //         }
+    //         )
+    //         fetch('http://127.0.0.1:8000/level3/')
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             setlevel3(data)
+    //         }
+    //         )
+    //         fetch('http://127.0.0.1:8000/level4/')
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             setlevel4(data)
+    //         }
+    //         )
+    //         fetch('http://127.0.0.1:8000/level5/')
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             setlevel5(data)
+    //         }
+    //         )
+    //         fetch('http://127.0.0.1:8000/level6/')
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             setlevel6(data)
+    //         }
+    //         )
+    //         fetch('http://127.0.0.1:8000/level7/')
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             setlevel7(data)
+    //         }
+    //         )
+    //         fetch('http://127.0.0.1:8000/level8/')
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             setlevel8(data)
+    //         }
+    //         )
+    //         fetch('http://127.0.0.1:8000/level9/')
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             setlevel9(data)
+    //         }
+    //         )
+    //         fetch('http://127.0.0.1:8000/level10/')
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             setlevel10(data)
+    //         }
+    //         )
+    //         fetch('http://127.0.0.1:8000/level11/')
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             setlevel11(data)
+    //         } 
+    //         )
+    //         fetch('http://127.0.0.1:8000/level12/')
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             setlevel12(data)
+    //         }
+    //         )
             
         
-    }, []);
+    // }, []);
     // console.log(level1[0])
     // console.log(level2[0])
     // console.log(level3[0])
@@ -318,19 +320,52 @@ const Game5 = () =>{
         'a':'green'
 
     }
+    const [button50visible, setbutton50visible] = useState(true)
+    const [buttonexpvisible, setbuttonexpvisible] = useState(true)
+    const THREE_DAYS_IN_MS = 60 * 1000;
+    const NOW_IN_MS = new Date().getTime();
+  
+    const dateTimeAfterThreeDays = NOW_IN_MS + THREE_DAYS_IN_MS;
+    const [timer, settimer] = useState(true)
     const [moneybg, setmoneybg] = useState(initialbg)
     const [flag, setflag] = useState(data[gamelevel].answer)
     return(
         <div className='game'>
-            <div className='next' onClick={()=>{
+            {timer===true &&
+                <CountdownTimer targetDate={dateTimeAfterThreeDays} />
+            }
+                <div className="lifeline">
+                {button50visible===true &&
+                    <div className="fifty" onClick={()=>setbutton50visible(false)}>
+                            <h2>50-50</h2>
+                    </div>
+                    }
+                    {button50visible===false &&
+                    <div className="fifty" onClick={()=>setbutton50visible(false)} style={{'opacity':0.5, 'cursor':'cursor', 'backgroundColor':'red'}}>
+                            <h2>50-50</h2>
+                    </div>
+                    }
+                        {buttonexpvisible===true &&
+                        <div className="expert" onClick={()=>setbuttonexpvisible(false)} >
+                            <FaUserFriends/>
+                        </div>
+                    }
+                        {buttonexpvisible===false &&
+                        <div className="expert" onClick={()=>setbuttonexpvisible(false)} style={{'opacity':0.5, 'cursor':'cursor', 'backgroundColor':'red'}}>
+                            <FaUserFriends/>
+                        </div>
+                    }
+
+                </div>
+            <div className='next'>
+                <button onClick={()=>{
                 changelevel()
-            }}>
-                <button><h3><GrNext/></h3></button>
+            }}><h3><GrNext/></h3></button>
 
             </div>
             <div className='top'>
             <div className='image'>
-                    <img src={img} alt='logo' />
+            <a href="/"><img src={img} alt='logo' /></a>
                 </div>
             </div>
             <div className='level'>

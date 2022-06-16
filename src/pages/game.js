@@ -1,6 +1,13 @@
 import React, {useEffect, useState} from 'react';
 import img from '../images/kbh.png'
 import { GrNext } from 'react-icons/gr';
+import { FaUserFriends } from 'react-icons/fa';
+
+
+
+import CountdownTimer from '../components/countdownTimer';
+
+
 
 
 const Game = () =>{
@@ -22,7 +29,11 @@ const Game = () =>{
     const csrftoken = getCookie('csrftoken');
 
 
- 
+
+    const [button50visible, setbutton50visible] = useState(true)
+    const [buttonexpvisible, setbuttonexpvisible] = useState(true)
+
+
 
 
     
@@ -37,7 +48,7 @@ const Game = () =>{
     },
     {
         "id": 2,
-        "ques": "Which is the name of the mountain?",
+        "ques": "Which of the following is the name of a mountain?",
         "answer": "K2",
         "option1": "C2",
         "option2": "K2",
@@ -58,8 +69,8 @@ const Game = () =>{
         "ques": "Which Piece of Chess can only move diagonally?",
         "answer": "The Bishop",
         "option1": "The Rook",
-        "option2": "The Rook",
-        "option3": "The Rook",
+        "option2": "The Knight",
+        "option3": "The Pawn",
         "option4": "The Bishop"
     },
     {
@@ -135,21 +146,6 @@ const Game = () =>{
         "option4": "इतिहास"
     }
     ]
-    const [level1, setlevel1] = useState([])
-    const [level2, setlevel2] = useState([])
-    const [level3, setlevel3] = useState([])
-    const [level4, setlevel4] = useState([])
-    const [level5, setlevel5] = useState([])
-    const [level6, setlevel6] = useState([])
-    const [level7, setlevel7] = useState([])
-    const [level8, setlevel8] = useState([])
-    const [level9, setlevel9] = useState([])
-    const [level10, setlevel10] = useState([])
-    const [level11, setlevel11] = useState([])
-    const [level12, setlevel12] = useState([])
-
-    const [datas, setdatas] = useState([])
-    const [datass, setdatass] = useState([])
     const initialcolor = {
         option1color:'transparent',
         option2color:'transparent',
@@ -158,104 +154,16 @@ const Game = () =>{
     }
     const [gamelevel, setgamelevel] = useState(0)
     const [color, setcolor] = useState(initialcolor)
+    const [rightans, setrightans] = useState(data[gamelevel].answer)
+
+    console.log(rightans)
 
 
-    // useEffect(() => {
-    //     fetch('http://127.0.0.1:8000/level1/')
-    //         .then(response => response.json())
-    //         .then(data => {
-    //             setlevel1(data)
-                
-                
-    //         }
-    //         )
-
-    //         fetch('http://127.0.0.1:8000/level2/')
-    //         .then(response => response.json())
-    //         .then(data => {
-    //             setlevel2(data)
-    //         }
-    //         )
-    //         fetch('http://127.0.0.1:8000/level3/')
-    //         .then(response => response.json())
-    //         .then(data => {
-    //             setlevel3(data)
-    //         }
-    //         )
-    //         fetch('http://127.0.0.1:8000/level4/')
-    //         .then(response => response.json())
-    //         .then(data => {
-    //             setlevel4(data)
-    //         }
-    //         )
-    //         fetch('http://127.0.0.1:8000/level5/')
-    //         .then(response => response.json())
-    //         .then(data => {
-    //             setlevel5(data)
-    //         }
-    //         )
-    //         fetch('http://127.0.0.1:8000/level6/')
-    //         .then(response => response.json())
-    //         .then(data => {
-    //             setlevel6(data)
-    //         }
-    //         )
-    //         fetch('http://127.0.0.1:8000/level7/')
-    //         .then(response => response.json())
-    //         .then(data => {
-    //             setlevel7(data)
-    //         }
-    //         )
-    //         fetch('http://127.0.0.1:8000/level8/')
-    //         .then(response => response.json())
-    //         .then(data => {
-    //             setlevel8(data)
-    //         }
-    //         )
-    //         fetch('http://127.0.0.1:8000/level9/')
-    //         .then(response => response.json())
-    //         .then(data => {
-    //             setlevel9(data)
-    //         }
-    //         )
-    //         fetch('http://127.0.0.1:8000/level10/')
-    //         .then(response => response.json())
-    //         .then(data => {
-    //             setlevel10(data)
-    //         }
-    //         )
-    //         fetch('http://127.0.0.1:8000/level11/')
-    //         .then(response => response.json())
-    //         .then(data => {
-    //             setlevel11(data)
-    //         } 
-    //         )
-    //         fetch('http://127.0.0.1:8000/level12/')
-    //         .then(response => response.json())
-    //         .then(data => {
-    //             setlevel12(data)
-    //             console.log(level12)
-    //         }
-    //         )
-            
-        
-    // },[]);
-    // console.log(level1[0])
-    // console.log(level2[0])
-    // console.log(level3[0])
-    // console.log(level4[0])
-    // console.log(level5[0])
-    // console.log(level6[0])
-    // console.log(level7[0])
-    // console.log(level8[0])
-    // console.log(level9[0])
-    // console.log(level10[0])
-    // console.log(level11[0])
-    // console.log(level12[0])
-    // console.log(datas)
-    
-    // setdatas([level1[0], level2[0], level3[0],level4[0], level5[0],level6[0], level7[0], level8[0],level9[0], level10[0], level11[0], level12[0]])
     console.log(data)
+    const THREE_DAYS_IN_MS = 60 * 1000;
+    const NOW_IN_MS = new Date().getTime();
+  
+    const dateTimeAfterThreeDays = NOW_IN_MS + THREE_DAYS_IN_MS;
 
    
     const changelevel = () =>{
@@ -320,19 +228,49 @@ const Game = () =>{
         'a':'green'
 
     }
+    const [timer, settimer] = useState(true)
     const [moneybg, setmoneybg] = useState(initialbg)
     const [flag, setflag] = useState(data[gamelevel].answer)
     return(
         <div className='game'>
-            <div className='next' onClick={()=>{
+            {timer===true &&
+                <CountdownTimer targetDate={dateTimeAfterThreeDays} />
+            }
+                <div className="lifeline">
+                    {button50visible===true &&
+                    <div className="fifty" onClick={()=>setbutton50visible(false)}>
+                            <h2>50-50</h2>
+                    </div>
+                    }
+                    {button50visible===false &&
+                    <div className="fifty" onClick={()=>setbutton50visible(false)} style={{'opacity':0.5, 'cursor':'cursor', 'backgroundColor':'red'}}>
+                            <h2>50-50</h2>
+                    </div>
+                    }
+                        {buttonexpvisible===true &&
+                        <div className="expert" onClick={()=>setbuttonexpvisible(false)} >
+                            <FaUserFriends/>
+                        </div>
+                    }
+                        {buttonexpvisible===false &&
+                        <div className="expert" onClick={()=>setbuttonexpvisible(false)} style={{'opacity':0.5, 'cursor':'cursor', 'backgroundColor':'red'}}>
+                            <FaUserFriends/>
+                        </div>
+                    }
+
+                    
+
+                </div>
+            <div className='next'>
+                <button onClick={()=>{
                 changelevel()
-            }}>
-                <button><h3><GrNext/></h3></button>
+                settimer(true)
+            }}><h3><GrNext/></h3></button>
 
             </div>
             <div className='top'>
             <div className='image'>
-                    <img src={img} alt='logo' />
+                    <a href="/"><img src={img} alt='logo' /></a>
                 </div>
             </div>
             <div className='level'>
@@ -360,6 +298,7 @@ const Game = () =>{
                 <div className='options'>
                 <div className='optiontop'>
                     <h1 style={{'backgroundColor':color.option1color}} onClick={()=>{
+                        settimer(false)
                         if (data[gamelevel].option1===data[gamelevel].answer){
                             setcolor({option1color:'green'})
                             setflag(data[gamelevel].answer)
@@ -380,7 +319,9 @@ const Game = () =>{
                        
                     }}><span>A: </span>{data[gamelevel].option1}</h1>
                     <h1 onClick={()=>{
+                        settimer(false)
                         if (data[gamelevel].option2===data[gamelevel].answer){
+                            
                             setcolor({option2color:'green'})
                 
                         }
@@ -401,6 +342,7 @@ const Game = () =>{
                 </div>
                 <div className='optionbottom'>
                     <h1 style={{'backgroundColor':color.option3color}} onClick={()=>{
+                        settimer(false)
                         if (data[gamelevel].option3===data[gamelevel].answer){
                             setcolor({option3color:'green'})
                 
@@ -419,6 +361,7 @@ const Game = () =>{
                        
                     }}><span>C: </span>{data[gamelevel].option3}</h1>
                     <h1 style={{'backgroundColor':color.option4color}} onClick={()=>{
+                        settimer(false)
                         if (data[gamelevel].option4===data[gamelevel].answer){
                             setcolor({option4color:'green'})
                 

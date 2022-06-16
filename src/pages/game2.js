@@ -1,6 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import img from '../images/kbh.png'
 import { GrNext } from 'react-icons/gr';
+import CountdownTimer from '../components/countdownTimer';
+import { FaUserFriends } from 'react-icons/fa';
+
+
 
 
 const Game2 = () =>{
@@ -22,12 +26,16 @@ const Game2 = () =>{
     const csrftoken = getCookie('csrftoken');
 
 
- 
+    const THREE_DAYS_IN_MS = 60 * 1000;
+    const NOW_IN_MS = new Date().getTime();
+  
+    const dateTimeAfterThreeDays = NOW_IN_MS + THREE_DAYS_IN_MS;
 
-
+    const [button50visible, setbutton50visible] = useState(true)
+    const [buttonexpvisible, setbuttonexpvisible] = useState(true)
     
     const data =[{
-        "id": 5,
+        "id": 1,
         "ques": "प्रसिद्ध नेपाली गीत \"सुन सहिली\" मा कति काटेपछि रमाउने कुरा गरिएको छ?",
         "answer": "४०",
         "option1": "३५",
@@ -36,13 +44,13 @@ const Game2 = () =>{
         "option4": "५०"
     },
     {
-        "id": 5,
-        "ques": "प्रसिद्ध नेपाली गीत \"सुन सहिली\" मा कति काटेपछि रमाउने कुरा गरिएको छ?",
-        "answer": "४०",
-        "option1": "३५",
-        "option2": "४०",
-        "option3": "४५",
-        "option4": "५०"
+        "id": 2,
+        "ques": "रामायणमा रावणको कतिओटा टाउको थिए?",
+        "answer": "१०",
+        "option1": "८",
+        "option2": "१०",
+        "option3": "१२",
+        "option4": "१४"
     },
     {
         "id": 3,
@@ -54,7 +62,7 @@ const Game2 = () =>{
         "option4": "Tissue's"
     },
     {
-        "id": 2,
+        "id": 4,
         "ques": "Who named the highest peak Mt.Everest as the third pole?",
         "answer": "Michael Karg",
         "option1": "Sir Edmund  Hillary",
@@ -63,7 +71,7 @@ const Game2 = () =>{
         "option4": "Michael Karg"
     },
     {
-        "id": 2,
+        "id": 5,
         "ques": "How many districts are there in Madhesh Pradesh?",
         "answer": "8",
         "option1": "6",
@@ -72,7 +80,7 @@ const Game2 = () =>{
         "option4": "9"
     },
     {
-        "id": 3,
+        "id": 6,
         "ques": "Who is the father of Geometry?",
         "answer": "Euclid",
         "option1": "Aristotle",
@@ -81,7 +89,7 @@ const Game2 = () =>{
         "option4": "Kepler"
     },
     {
-        "id": 2,
+        "id": 7,
         "ques": "Madhan Puraskar Winning Book \"अन्तर्मनको यात्रा\" was written by?",
         "answer": "Jagdesh Ghimire",
         "option1": "Haribansa Acharya",
@@ -90,7 +98,7 @@ const Game2 = () =>{
         "option4": "Amar Neupane"
     },
     {
-        "id": 2,
+        "id": 8,
         "ques": "The iconic character James Bond is related with the number .........?",
         "answer": "007",
         "option1": "303",
@@ -99,7 +107,7 @@ const Game2 = () =>{
         "option4": "646"
     },
     {
-        "id": 2,
+        "id": 9,
         "ques": "नेपालको सबैभन्दा अग्लो स्थानमा रहेको तिलिचो तालसमुन्द्र सतहदेखि कति मि. उचाईमा अवस्थित छ?",
         "answer": "४९१९ मि",
         "option1": "४९१९ मि",
@@ -108,7 +116,7 @@ const Game2 = () =>{
         "option4": "४९२०मि"
     },
     {
-        "id": 2,
+        "id": 10,
         "ques": "When did Nirmala Panta carnage happened in Kanchanpur?",
         "answer": "2075, Shrawan 10",
         "option1": "2075, Ashad 10",
@@ -117,7 +125,7 @@ const Game2 = () =>{
         "option4": "2075, Ashoj 10"
     },
     {
-        "id": 2,
+        "id": 11,
         "ques": "फिफा विश्वकपमा सुन प्रयोग गर्दा कति क्यारेटको गरिन्छ?",
         "answer": "१८ क्यारेट",
         "option1": "१६ क्यारेट",
@@ -126,7 +134,7 @@ const Game2 = () =>{
         "option4": "२२ क्यारेट"
     },
     {
-        "id": 2,
+        "id": 12,
         "ques": "धनुषबाण खेलको सुरुवात कुन देशबाट भएको हो ?",
         "answer": "स्पेन",
         "option1": "फ्रान्स",
@@ -135,101 +143,101 @@ const Game2 = () =>{
         "option4": "स्पेन"
     }
     ]
-    const [level1, setlevel1] = useState([])
-    const [level2, setlevel2] = useState([])
-    const [level3, setlevel3] = useState([])
-    const [level4, setlevel4] = useState([])
-    const [level5, setlevel5] = useState([])
-    const [level6, setlevel6] = useState([])
-    const [level7, setlevel7] = useState([])
-    const [level8, setlevel8] = useState([])
-    const [level9, setlevel9] = useState([])
-    const [level10, setlevel10] = useState([])
-    const [level11, setlevel11] = useState([])
-    const [level12, setlevel12] = useState([])
+    // const [level1, setlevel1] = useState([])
+    // const [level2, setlevel2] = useState([])
+    // const [level3, setlevel3] = useState([])
+    // const [level4, setlevel4] = useState([])
+    // const [level5, setlevel5] = useState([])
+    // const [level6, setlevel6] = useState([])
+    // const [level7, setlevel7] = useState([])
+    // const [level8, setlevel8] = useState([])
+    // const [level9, setlevel9] = useState([])
+    // const [level10, setlevel10] = useState([])
+    // const [level11, setlevel11] = useState([])
+    // const [level12, setlevel12] = useState([])
 
-    const [datas, setdatas] = useState([])
+    // const [datas, setdatas] = useState([])
     
 
-    useEffect(() => {
-        console.log("sjdfhbhj")
-        fetch('http://127.0.0.1:8000/level1/')
-            .then(response => response.json())
-            .then(data => {
-                setlevel1(data)
+    // useEffect(() => {
+    //     console.log("sjdfhbhj")
+    //     fetch('http://127.0.0.1:8000/level1/')
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             setlevel1(data)
                 
-            }
-            )
+    //         }
+    //         )
 
-            fetch('http://127.0.0.1:8000/level2/')
-            .then(response => response.json())
-            .then(data => {
-                setlevel2(data)
-            }
-            )
-            fetch('http://127.0.0.1:8000/level3/')
-            .then(response => response.json())
-            .then(data => {
-                setlevel3(data)
-            }
-            )
-            fetch('http://127.0.0.1:8000/level4/')
-            .then(response => response.json())
-            .then(data => {
-                setlevel4(data)
-            }
-            )
-            fetch('http://127.0.0.1:8000/level5/')
-            .then(response => response.json())
-            .then(data => {
-                setlevel5(data)
-            }
-            )
-            fetch('http://127.0.0.1:8000/level6/')
-            .then(response => response.json())
-            .then(data => {
-                setlevel6(data)
-            }
-            )
-            fetch('http://127.0.0.1:8000/level7/')
-            .then(response => response.json())
-            .then(data => {
-                setlevel7(data)
-            }
-            )
-            fetch('http://127.0.0.1:8000/level8/')
-            .then(response => response.json())
-            .then(data => {
-                setlevel8(data)
-            }
-            )
-            fetch('http://127.0.0.1:8000/level9/')
-            .then(response => response.json())
-            .then(data => {
-                setlevel9(data)
-            }
-            )
-            fetch('http://127.0.0.1:8000/level10/')
-            .then(response => response.json())
-            .then(data => {
-                setlevel10(data)
-            }
-            )
-            fetch('http://127.0.0.1:8000/level11/')
-            .then(response => response.json())
-            .then(data => {
-                setlevel11(data)
-            } 
-            )
-            fetch('http://127.0.0.1:8000/level12/')
-            .then(response => response.json())
-            .then(data => {
-                setlevel12(data)
-            }
-            )
+    //         fetch('http://127.0.0.1:8000/level2/')
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             setlevel2(data)
+    //         }
+    //         )
+    //         fetch('http://127.0.0.1:8000/level3/')
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             setlevel3(data)
+    //         }
+    //         )
+    //         fetch('http://127.0.0.1:8000/level4/')
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             setlevel4(data)
+    //         }
+    //         )
+    //         fetch('http://127.0.0.1:8000/level5/')
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             setlevel5(data)
+    //         }
+    //         )
+    //         fetch('http://127.0.0.1:8000/level6/')
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             setlevel6(data)
+    //         }
+    //         )
+    //         fetch('http://127.0.0.1:8000/level7/')
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             setlevel7(data)
+    //         }
+    //         )
+    //         fetch('http://127.0.0.1:8000/level8/')
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             setlevel8(data)
+    //         }
+    //         )
+    //         fetch('http://127.0.0.1:8000/level9/')
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             setlevel9(data)
+    //         }
+    //         )
+    //         fetch('http://127.0.0.1:8000/level10/')
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             setlevel10(data)
+    //         }
+    //         )
+    //         fetch('http://127.0.0.1:8000/level11/')
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             setlevel11(data)
+    //         } 
+    //         )
+    //         fetch('http://127.0.0.1:8000/level12/')
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             setlevel12(data)
+    //         }
+    //         )
             
         
-    }, []);
+    // }, []);
     // console.log(level1[0])
     // console.log(level2[0])
     // console.log(level3[0])
@@ -245,9 +253,9 @@ const Game2 = () =>{
 
     
     // setdatas([level1[0], level2[0], level3[0],level4[0], level5[0],level6[0], level7[0], level8[0],level9[0], level10[0], level11[0], level12[0]])
-    console.log(level1[0])
-    const finalarray = [level1[0], level2[0], level3[0],level4[0], level5[0],level6[0], level7[0], level8[0],level9[0], level10[0], level11[0], level12[0]]
-    console.log(finalarray)
+    // console.log(level1[0])
+    // const finalarray = [level1[0], level2[0], level3[0],level4[0], level5[0],level6[0], level7[0], level8[0],level9[0], level10[0], level11[0], level12[0]]
+    // console.log(finalarray)
 
     const initialcolor = {
         option1color:'transparent',
@@ -260,7 +268,7 @@ const Game2 = () =>{
     const changelevel = () =>{
         setgamelevel(gamelevel+1)
         setcolor(initialcolor)
-        setflag(finalarray[gamelevel+1].answer)
+        setflag(data[gamelevel+1].answer)
         console.log(gamelevel+1)
         setmoneybg(initialbg)
         if (gamelevel +1 === 0){
@@ -319,19 +327,46 @@ const Game2 = () =>{
         'a':'green'
 
     }
+    const [timer, settimer] = useState(true)
     const [moneybg, setmoneybg] = useState(initialbg)
-    const [flag, setflag] = useState(finalarray[gamelevel].answer)
+    const [flag, setflag] = useState(data[gamelevel].answer)
     return(
         <div className='game'>
-            <div className='next' onClick={()=>{
+            {timer===true &&
+                <CountdownTimer targetDate={dateTimeAfterThreeDays} />
+            }
+                <div className="lifeline">
+                {button50visible===true &&
+                    <div className="fifty" onClick={()=>setbutton50visible(false)}>
+                            <h2>50-50</h2>
+                    </div>
+                    }
+                    {button50visible===false &&
+                    <div className="fifty" onClick={()=>setbutton50visible(false)} style={{'opacity':0.5, 'cursor':'cursor', 'backgroundColor':'red'}}>
+                            <h2>50-50</h2>
+                    </div>
+                    }
+                        {buttonexpvisible===true &&
+                        <div className="expert" onClick={()=>setbuttonexpvisible(false)} >
+                            <FaUserFriends/>
+                        </div>
+                    }
+                        {buttonexpvisible===false &&
+                        <div className="expert" onClick={()=>setbuttonexpvisible(false)} style={{'opacity':0.5, 'cursor':'cursor', 'backgroundColor':'red'}}>
+                            <FaUserFriends/>
+                        </div>
+                    }
+
+                </div>
+            <div className='next'>
+                <button onClick={()=>{
                 changelevel()
-            }}>
-                <button><h3><GrNext/></h3></button>
+            }}><h3 ><GrNext/></h3></button>
 
             </div>
             <div className='top'>
             <div className='image'>
-                    <img src={img} alt='logo' />
+            <a href="/"><img src={img} alt='logo' /></a>
                 </div>
             </div>
             <div className='level'>
@@ -354,21 +389,21 @@ const Game2 = () =>{
             <div className='bottom'>
                 
                 <div className='question'>
-                    <h1>{finalarray[gamelevel].ques}</h1>
+                    <h1>{data[gamelevel].ques}</h1>
                 </div>
                 <div className='options'>
                 <div className='optiontop'>
                     <h1 style={{'backgroundColor':color.option1color}} onClick={()=>{
-                        if (finalarray[gamelevel].option1===finalarray[gamelevel].answer){
+                        if (data[gamelevel].option1===data[gamelevel].answer){
                             setcolor({option1color:'green'})
-                            setflag(finalarray[gamelevel].answer)
+                            setflag(data[gamelevel].answer)
                 
                         }
                         else{
-                            if(flag===finalarray[gamelevel].option2){
+                            if(flag===data[gamelevel].option2){
                                 setcolor({option2color:'green',option1color:'red'})
                             }
-                            else if(flag===finalarray[gamelevel].option3){
+                            else if(flag===data[gamelevel].option3){
                                 setcolor({option3color:'green',option1color:'red'})
                             }
                             else{
@@ -377,17 +412,17 @@ const Game2 = () =>{
                             
                         }
                        
-                    }}><span>A: </span>{finalarray[gamelevel].option1}</h1>
+                    }}><span>A: </span>{data[gamelevel].option1}</h1>
                     <h1 onClick={()=>{
-                        if (finalarray[gamelevel].option2===finalarray[gamelevel].answer){
+                        if (data[gamelevel].option2===data[gamelevel].answer){
                             setcolor({option2color:'green'})
                 
                         }
                         else{
-                            if(flag===finalarray[gamelevel].option1){
+                            if(flag===data[gamelevel].option1){
                                 setcolor({option1color:'green',option2color:'red'})
                             }
-                            else if(flag===finalarray[gamelevel].option3){
+                            else if(flag===data[gamelevel].option3){
                                 setcolor({option3color:'green',option2color:'red'})
                             }
                             else{
@@ -396,19 +431,19 @@ const Game2 = () =>{
                             
                         }
                        
-                    }} style={{'backgroundColor':color.option2color}}><span>B: </span>{finalarray[gamelevel].option2}</h1>
+                    }} style={{'backgroundColor':color.option2color}}><span>B: </span>{data[gamelevel].option2}</h1>
                 </div>
                 <div className='optionbottom'>
                     <h1 style={{'backgroundColor':color.option3color}} onClick={()=>{
-                        if (finalarray[gamelevel].option3===finalarray[gamelevel].answer){
+                        if (data[gamelevel].option3===data[gamelevel].answer){
                             setcolor({option3color:'green'})
                 
                         }
                         else{
-                            if(flag===finalarray[gamelevel].option1){
+                            if(flag===data[gamelevel].option1){
                                 setcolor({option1color:'green',option3color:'red'})
                             }
-                            else if(flag===finalarray[gamelevel].option2){
+                            else if(flag===data[gamelevel].option2){
                                 setcolor({option2color:'green',option3color:'red'})
                             }
                             else{
@@ -416,17 +451,17 @@ const Game2 = () =>{
                             }
                         }
                        
-                    }}><span>C: </span>{finalarray[gamelevel].option3}</h1>
+                    }}><span>C: </span>{data[gamelevel].option3}</h1>
                     <h1 style={{'backgroundColor':color.option4color}} onClick={()=>{
-                        if (finalarray[gamelevel].option4===finalarray[gamelevel].answer){
+                        if (data[gamelevel].option4===data[gamelevel].answer){
                             setcolor({option4color:'green'})
                 
                         }
                         else{
-                            if(flag===finalarray[gamelevel].option1){
+                            if(flag===data[gamelevel].option1){
                                 setcolor({option1color:'green',option4color:'red'})
                             }
-                            else if(flag===finalarray[gamelevel].option2){
+                            else if(flag===data[gamelevel].option2){
                                 setcolor({option2color:'green',option4color:'red'})
                             }
                             else{
@@ -435,7 +470,7 @@ const Game2 = () =>{
 
                         }
                        
-                    }}><span>D: </span>{finalarray[gamelevel].option4}</h1>
+                    }}><span>D: </span>{data[gamelevel].option4}</h1>
                 </div>
                 </div>
             </div>

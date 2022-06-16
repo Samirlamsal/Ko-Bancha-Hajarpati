@@ -19,7 +19,7 @@ function App() {
       <div className="App">
         <Routes>
           <Route exact path='/' element={<Homepage />}></Route>
-          <Route exact path='/game' element={<Game />}></Route>
+          <Route exact path='/game1' element={<Game />}></Route>
           <Route exact path='/game2' element={<Game2 />}></Route>
           <Route exact path='/game3' element={<Game3 />}></Route>
           <Route exact path='/game4' element={<Game4 />}></Route>
