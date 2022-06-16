@@ -26,101 +26,113 @@ const Game6 = () =>{
 
 
     
-    const data =[{
-        'question':'Bahubali festival is related to',
-        'answer':'Buddhism',
-        'option1':'Islam',
-        'option2':'Hinduism',
-        'option3':'Buddhism',
-        'option4':'Jainism',
+    const data =[    {
+        ,
+        "ques": "तल दिइएका मध्य कुन चाँहि स्टेशनरी सामान हो ?",
+        "answer": "कलम",
+        "option1": "आइसक्रिम",
+        "option2": "मोबाइल",
+        "option3": "कलम",
+        "option4": "टेबल"}
+    ,
+    {
+        
+        "ques": "नेपालको हाल वर्तमान शिक्षामन्त्री को हुनुहुन्छ?",
+        "answer": "देवेन्द्र पौडेल",
+        "option1": "गिरराजमणी पोख्रेल",
+        "option2": "गोपालमान श्रेष्ठ",
+        "option3": "देवेन्द्र पौडेल",
+        "option4": "जनार्दन शर्मा"
     },
     {
-        'question':'Which day is observed as the World Standards Day?',
-        'answer':'Oct 14',
-        'option1':'June 26',
-        'option2':'Oct 14',
-        'option3':'Nov 15',
-        'option4':'Dec 2',
+        
+        "ques": "Which country has the biggest constitution in the world?",
+        "answer": "India",
+        "option1": "India",
+        "option2": "England",
+        "option3": "USA",
+        "option4": "China"
     },
     {
-        'question':'The International Literacy Day is observed on',
-        'answer':'Sep 8',
-        'option1':'Sep 8',
-        'option2':'Nov 28',
-        'option3':'May 2',
-        'option4':'Sep 22',
+        
+        "ques": "Which game was first played in space?",
+        "answer": "Chess",
+        "option1": "Golf",
+        "option2": "Chess",
+        "option3": "Baseball",
+        "option4": "Hockey"
     },
     {
-        'question':'September 27 is celebrated every year as',
-        'answer':'World Tourism Day',
-        'option1':'Teachers` Day',
-        'option2':'National Integration Day',
-        'option3':'World Tourism Day',
-        'option4':'International Literacy Day',
+        
+        "ques": "Where is the central headquarter of Asian Development Bank (ADB)?",
+        "answer": "Manila, Philipenes",
+        "option1": "Manila, Philipenes",
+        "option2": "Tokyo, Japan",
+        "option3": "Seoul, Korea",
+        "option4": "Beijing China"
     },
     {
-        'question':'Bahubali festival is related to',
-        'answer':'Buddhism',
-        'option1':'Islam',
-        'option2':'Hinduism',
-        'option3':'Buddhism',
-        'option4':'Jainism',
+        
+        "ques": "Which is the national game of USA?",
+        "answer": "Baseball",
+        "option1": "American Soccer",
+        "option2": "Baseball",
+        "option3": "Boxing",
+        "option4": "Hockey"
+    },
+   {
+        
+        "ques": "Which country won the first fotball world cup?",
+        "answer": "Uruguay",
+        "option1": "Brazil",
+        "option2": "Uruguay",
+        "option3": "Argentina",
+        "option4": "France"
+    },
+   {
+        
+        "ques": "How old must be a person to become president?",
+        "answer": "55",
+        "option1": "45",
+        "option2": "55",
+        "option3": "65",
+        "option4": "70"
     },
     {
-        'question':'Which day is observed as the World Standards Day?',
-        'answer':'Oct 14',
-        'option1':'June 26',
-        'option2':'Oct 14',
-        'option3':'Nov 15',
-        'option4':'Dec 2',
+        
+        "ques": "\"City of enjoy\" भनेर कुन सहरलाई चिनिन्छ?",
+        "answer": "कोलकता",
+        "option1": "पेरिस",
+        "option2": "लन्डन",
+        "option3": "कोलकता",
+        "option4": "सिडनी"
     },
     {
-        'question':'The International Literacy Day is observed on',
-        'answer':'Sep 8',
-        'option1':'Sep 8',
-        'option2':'Nov 28',
-        'option3':'May 2',
-        'option4':'Sep 22',
+        
+        "ques": "भुवन केसीको पहिलो चलचित्र कुन हो ?",
+        "answer": "जुनी",
+        "option1": "जुनी",
+        "option2": "कुसुमे रुमाल",
+        "option3": "साइनो",
+        "option4": "दक्षिणा"
     },
     {
-        'question':'September 27 is celebrated every year as',
-        'answer':'World Tourism Day',
-        'option1':'Teachers` Day',
-        'option2':'National Integration Day',
-        'option3':'World Tourism Day',
-        'option4':'International Literacy Day',
+        
+        "ques": "Headquarters of UNO are situated at",
+        "answer": "New York, USA",
+        "option1": "Paris",
+        "option2": "Geneva",
+        "option3": "London",
+        "option4": "New York, USA"
     },
     {
-        'question':'Bahubali festival is related to',
-        'answer':'Buddhism',
-        'option1':'Islam',
-        'option2':'Hinduism',
-        'option3':'Buddhism',
-        'option4':'Jainism',
-    },
-    {
-        'question':'Which day is observed as the World Standards Day?',
-        'answer':'Oct 14',
-        'option1':'June 26',
-        'option2':'Oct 14',
-        'option3':'Nov 15',
-        'option4':'Dec 2',
-    },
-    {
-        'question':'The International Literacy Day is observed on',
-        'answer':'Sep 8',
-        'option1':'Sep 8',
-        'option2':'Nov 28',
-        'option3':'May 2',
-        'option4':'Sep 22',
-    },
-    {
-        'question':'September 27 is celebrated every year as',
-        'answer':'World Tourism Day',
-        'option1':'Teachers` Day',
-        'option2':'National Integration Day',
-        'option3':'World Tourism Day',
-        'option4':'International Literacy Day',
+        
+        "ques": "भारतीय क्रिकटर महेन्द्र सिंह धोनीले अन्तराष्ट्रिय क्रिकेट टेष्ट म्याचबाट सन्यास घोषणा कहिले गरे?",
+        "answer": "December 30,2014",
+        "option1": "December 30,2015",
+        "option2": "December 30,2013",
+        "option3": "December 30,2014",
+        "option4": "December 30,2016"
     }
     ]
     const [level1, setlevel1] = useState([])

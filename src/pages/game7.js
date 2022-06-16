@@ -27,100 +27,109 @@ const Game7 = () =>{
 
     
     const data =[{
-        'question':'Bahubali festival is related to',
-        'answer':'Buddhism',
-        'option1':'Islam',
-        'option2':'Hinduism',
-        'option3':'Buddhism',
-        'option4':'Jainism',
+        "ques": "इन्जिनियरिङ अध्यन संस्थान पश्चिमान्चल क्याम्पसको क्याम्पस प्रमुख को हुनुहुन्छ?",
+        "answer": "निर्मल प्रसाद बराल",
+        "option1": "राम प्रसाद पौडेल",
+        "option2": "निर्मल प्रसाद बराल",
+        "option3": "बाबुराम भण्डारी",
+        "option4": "डा. कृष्ण राज अधिकारी"
     },
     {
-        'question':'Which day is observed as the World Standards Day?',
-        'answer':'Oct 14',
-        'option1':'June 26',
-        'option2':'Oct 14',
-        'option3':'Nov 15',
-        'option4':'Dec 2',
+      
+        "ques": "\" विद्युतका पिता\"भनेर कसलाई चिनिन्छ?",
+        "answer": "माइकल फाराडे",
+        "option1": "न्यूटन",
+        "option2": "अर्कीमीडिज",
+        "option3": "ग्यालिलियो ग्यालिलि",
+        "option4": "माइकल फाराडे"
+    },
+  {
+       
+        "ques": "Who invented the theory of relativity?",
+        "answer": "Albert Einstein",
+        "option1": "Albert Einstein",
+        "option2": "Sir Issac Newton",
+        "option3": "Robert Boyle",
+        "option4": "Michael Faraday"
+    },
+   {
+        
+        "ques": "उरूग्वेका फुटबल खेलाडी लुइस सुवारेज़लाई सन् २०१४ मा कुन गल्तीका कारण प्रतिबन्ध लगाइएको थियो?",
+        "answer": "प्रतिद्वन्दी खेलाडीलाई टोकेर",
+        "option1": "प्रतिद्वन्दी खेलाडीलाई टोकेर",
+        "option2": "रेफ्रीलाई थप्पड हानेर",
+        "option3": "टाउकोले प्रतिद्वन्दीलाई हानेर",
+        "option4": "डाेप टेष्टमा फेल भएर"
     },
     {
-        'question':'The International Literacy Day is observed on',
-        'answer':'Sep 8',
-        'option1':'Sep 8',
-        'option2':'Nov 28',
-        'option3':'May 2',
-        'option4':'Sep 22',
+        "ques": "How many rhododendrons are present in the national emblem of Nepal?",
+        "answer": "14",
+        "option1": "10",
+        "option2": "12",
+        "option3": "14",
+        "option4": "16"
     },
     {
-        'question':'September 27 is celebrated every year as',
-        'answer':'World Tourism Day',
-        'option1':'Teachers` Day',
-        'option2':'National Integration Day',
-        'option3':'World Tourism Day',
-        'option4':'International Literacy Day',
+        "ques": "Which is the most expensive element?",
+        "answer": "Radium",
+        "option1": "Gold",
+        "option2": "Radium",
+        "option3": "Uranium",
+        "option4": "Xenon"
     },
     {
-        'question':'Bahubali festival is related to',
-        'answer':'Buddhism',
-        'option1':'Islam',
-        'option2':'Hinduism',
-        'option3':'Buddhism',
-        'option4':'Jainism',
+       
+        "ques": "Who is the first person to use the word \"Jay Nepal\"?",
+        "answer": "Shukra Raj Shastri",
+        "option1": "Dharma Bhakta Mathema",
+        "option2": "Chandra Shumsher",
+        "option3": "Shukra Raj Shastri",
+        "option4": "BP Koirala"
     },
     {
-        'question':'Which day is observed as the World Standards Day?',
-        'answer':'Oct 14',
-        'option1':'June 26',
-        'option2':'Oct 14',
-        'option3':'Nov 15',
-        'option4':'Dec 2',
+        
+        "ques": "How many doors are there in koshi barrage?",
+        "answer": "55",
+        "option1": "40",
+        "option2": "47",
+        "option3": "55",
+        "option4": "62"
     },
     {
-        'question':'The International Literacy Day is observed on',
-        'answer':'Sep 8',
-        'option1':'Sep 8',
-        'option2':'Nov 28',
-        'option3':'May 2',
-        'option4':'Sep 22',
+        
+        "ques": "प्रसिद्ध भारतीय अभिनेता अमिता बच्चनको पहिलो फिल्म कुन हो?",
+        "answer": "सात हिन्दुस्तानी",
+        "option1": "सात हिन्दुस्तानी",
+        "option2": "देवर",
+        "option3": "सान",
+        "option4": "दोस्ताना"
+    },
+     {
+        
+        "ques": "नेपालको जस्तै नक्सा भएको अर्को देश कुन हो ?",
+        "answer": "पोर्चुगल",
+        "option1": "इटाली",
+        "option2": "स्पेन",
+        "option3": "टर्की",
+        "option4": "पोर्चुगल"
     },
     {
-        'question':'September 27 is celebrated every year as',
-        'answer':'World Tourism Day',
-        'option1':'Teachers` Day',
-        'option2':'National Integration Day',
-        'option3':'World Tourism Day',
-        'option4':'International Literacy Day',
+        
+        "ques": "आदिकवि भनेर भानुभक्त आचार्यलाई चिनिन्छ भने जनकवि केसरी भनेर कसलाई चिनिन्छ  ?",
+        "answer": "धर्मराज थापा",
+        "option1": "मेघराज गौतम",
+        "option2": "धर्मराज थापा",
+        "option3": "कविताराम श्रेष्ठ",
+        "option4": "अलिमिया"
     },
     {
-        'question':'Bahubali festival is related to',
-        'answer':'Buddhism',
-        'option1':'Islam',
-        'option2':'Hinduism',
-        'option3':'Buddhism',
-        'option4':'Jainism',
-    },
-    {
-        'question':'Which day is observed as the World Standards Day?',
-        'answer':'Oct 14',
-        'option1':'June 26',
-        'option2':'Oct 14',
-        'option3':'Nov 15',
-        'option4':'Dec 2',
-    },
-    {
-        'question':'The International Literacy Day is observed on',
-        'answer':'Sep 8',
-        'option1':'Sep 8',
-        'option2':'Nov 28',
-        'option3':'May 2',
-        'option4':'Sep 22',
-    },
-    {
-        'question':'September 27 is celebrated every year as',
-        'answer':'World Tourism Day',
-        'option1':'Teachers` Day',
-        'option2':'National Integration Day',
-        'option3':'World Tourism Day',
-        'option4':'International Literacy Day',
+        
+        "ques": "\"Do or Die\" कसको भनाई हो ?",
+        "answer": "महात्मा गान्धी",
+        "option1": "बारक ओबामा",
+        "option2": "महात्मा गान्धी",
+        "option3": "सेक्सपीयर",
+        "option4": "हिटलर"
     }
     ]
     const [level1, setlevel1] = useState([])
