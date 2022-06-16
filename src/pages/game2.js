@@ -3,7 +3,7 @@ import img from '../images/kbh.png'
 import { GrNext } from 'react-icons/gr';
 
 
-const Game = () =>{
+const Game2 = () =>{
     function getCookie(name) {
         let cookieValue = null;
         if (document.cookie && document.cookie !== '') {
@@ -27,112 +27,100 @@ const Game = () =>{
 
     
     const data =[{
-        "id": 1,
-        "ques": "'जुरासिक पार्क' सिनेमा कुन जनावरमा आधारित छ ?",
-        "answer": "डायनोसर",
-        "option1": "डल्फिन",
-        "option2": "हात्ती",
-        "option3": "सर्प",
-        "option4": "डायनोसर"
+        'question':'Bahubali festival is related to',
+        'answer':'Buddhism',
+        'option1':'Islam',
+        'option2':'Hinduism',
+        'option3':'Buddhism',
+        'option4':'Jainism',
     },
     {
-        "id": 2,
-        "ques": "Which is the name of the mountain?",
-        "answer": "K2",
-        "option1": "C2",
-        "option2": "K2",
-        "option3": "R2",
-        "option4": "U2"
+        'question':'Which day is observed as the World Standards Day?',
+        'answer':'Oct 14',
+        'option1':'June 26',
+        'option2':'Oct 14',
+        'option3':'Nov 15',
+        'option4':'Dec 2',
     },
     {
-        "id": 3,
-        "ques": "Which is the shortest month in leap year?",
-        "answer": "February",
-        "option1": "January",
-        "option2": "February",
-        "option3": "March",
-        "option4": "April"
+        'question':'The International Literacy Day is observed on',
+        'answer':'Sep 8',
+        'option1':'Sep 8',
+        'option2':'Nov 28',
+        'option3':'May 2',
+        'option4':'Sep 22',
     },
     {
-        "id": 4,
-        "ques": "Which Piece of Chess can only move diagonally?",
-        "answer": "The Bishop",
-        "option1": "The Rook",
-        "option2": "The Rook",
-        "option3": "The Rook",
-        "option4": "The Bishop"
+        'question':'September 27 is celebrated every year as',
+        'answer':'World Tourism Day',
+        'option1':'Teachers` Day',
+        'option2':'National Integration Day',
+        'option3':'World Tourism Day',
+        'option4':'International Literacy Day',
     },
     {
-        "id": 5,
-        "ques": "What was Google originally called?",
-        "answer": "Backrub",
-        "option1": "Backchat",
-        "option2": "Backrub",
-        "option3": "Duogol",
-        "option4": "Gogol"
+        'question':'Bahubali festival is related to',
+        'answer':'Buddhism',
+        'option1':'Islam',
+        'option2':'Hinduism',
+        'option3':'Buddhism',
+        'option4':'Jainism',
     },
     {
-        "id": 6,
-        "ques": "Who is the writer of the world famous novel \"Mother of a Traitor\"?",
-        "answer": "Maxim Gorky",
-        "option1": "G.B Shaw",
-        "option2": "Maxim Gorky",
-        "option3": "Victor Hugo",
-        "option4": "Vladimir Mobokov"
+        'question':'Which day is observed as the World Standards Day?',
+        'answer':'Oct 14',
+        'option1':'June 26',
+        'option2':'Oct 14',
+        'option3':'Nov 15',
+        'option4':'Dec 2',
     },
     {
-        "id": 7,
-        "ques": "Fathometer is used to measure .............",
-        "answer": "Ocean Depth",
-        "option1": "Earthquake",
-        "option2": "Rainfall",
-        "option3": "Sound Intensity",
-        "option4": "Ocean Depth"
+        'question':'The International Literacy Day is observed on',
+        'answer':'Sep 8',
+        'option1':'Sep 8',
+        'option2':'Nov 28',
+        'option3':'May 2',
+        'option4':'Sep 22',
     },
     {
-        "id": 8,
-        "ques": "Which mountaineer is known as \"Hiu Chituwa\"?",
-        "answer": "Aangnta Sherpa",
-        "option1": "Aangnta Sherpa",
-        "option2": "Tenzing Norgay Sherpa",
-        "option3": "Appa Sherpa",
-        "option4": "Babuchhiri Sherpa"
+        'question':'September 27 is celebrated every year as',
+        'answer':'World Tourism Day',
+        'option1':'Teachers` Day',
+        'option2':'National Integration Day',
+        'option3':'World Tourism Day',
+        'option4':'International Literacy Day',
     },
     {
-        "id": 9,
-        "ques": "First SAARC nation to implement vat system is ........",
-        "answer": "Bangladesh",
-        "option1": "Bangladesh",
-        "option2": "Nepal",
-        "option3": "Pakistan",
-        "option4": "Srilanka"
+        'question':'Bahubali festival is related to',
+        'answer':'Buddhism',
+        'option1':'Islam',
+        'option2':'Hinduism',
+        'option3':'Buddhism',
+        'option4':'Jainism',
     },
     {
-        "id": 10,
-        "ques": "At what height, Muktinath temple is located?",
-        "answer": "3750m",
-        "option1": "3600m",
-        "option2": "3650m",
-        "option3": "3700m",
-        "option4": "3750m"
+        'question':'Which day is observed as the World Standards Day?',
+        'answer':'Oct 14',
+        'option1':'June 26',
+        'option2':'Oct 14',
+        'option3':'Nov 15',
+        'option4':'Dec 2',
     },
     {
-        "id": 11,
-        "ques": "During World War II, when did Germany attack France?",
-        "answer": "1940",
-        "option1": "1938",
-        "option2": "1939",
-        "option3": "1940",
-        "option4": "1941"
+        'question':'The International Literacy Day is observed on',
+        'answer':'Sep 8',
+        'option1':'Sep 8',
+        'option2':'Nov 28',
+        'option3':'May 2',
+        'option4':'Sep 22',
     },
     {
-        "id": 12,
-        "ques": "ब्लु प्लानेट अवार्ड कुन क्षेत्रसँग सम्बन्धित पुरस्कार हो ?",
-        "answer": "वातावरण",
-        "option1": "वातावरण",
-        "option2": "भूगोल",
-        "option3": "विज्ञान",
-        "option4": "इतिहास"
+        'question':'September 27 is celebrated every year as',
+        'answer':'World Tourism Day',
+        'option1':'Teachers` Day',
+        'option2':'National Integration Day',
+        'option3':'World Tourism Day',
+        'option4':'International Literacy Day',
     }
     ]
     const [level1, setlevel1] = useState([])
@@ -149,97 +137,87 @@ const Game = () =>{
     const [level12, setlevel12] = useState([])
 
     const [datas, setdatas] = useState([])
-    const [datass, setdatass] = useState([])
-    const initialcolor = {
-        option1color:'transparent',
-        option2color:'transparent',
-        option3color:'transparent',
-        option4color:'transparent'
-    }
-    const [gamelevel, setgamelevel] = useState(0)
-    const [color, setcolor] = useState(initialcolor)
+    
 
-
-    // useEffect(() => {
-    //     fetch('http://127.0.0.1:8000/level1/')
-    //         .then(response => response.json())
-    //         .then(data => {
-    //             setlevel1(data)
+    useEffect(() => {
+        console.log("sjdfhbhj")
+        fetch('http://127.0.0.1:8000/level1/')
+            .then(response => response.json())
+            .then(data => {
+                setlevel1(data)
                 
-                
-    //         }
-    //         )
+            }
+            )
 
-    //         fetch('http://127.0.0.1:8000/level2/')
-    //         .then(response => response.json())
-    //         .then(data => {
-    //             setlevel2(data)
-    //         }
-    //         )
-    //         fetch('http://127.0.0.1:8000/level3/')
-    //         .then(response => response.json())
-    //         .then(data => {
-    //             setlevel3(data)
-    //         }
-    //         )
-    //         fetch('http://127.0.0.1:8000/level4/')
-    //         .then(response => response.json())
-    //         .then(data => {
-    //             setlevel4(data)
-    //         }
-    //         )
-    //         fetch('http://127.0.0.1:8000/level5/')
-    //         .then(response => response.json())
-    //         .then(data => {
-    //             setlevel5(data)
-    //         }
-    //         )
-    //         fetch('http://127.0.0.1:8000/level6/')
-    //         .then(response => response.json())
-    //         .then(data => {
-    //             setlevel6(data)
-    //         }
-    //         )
-    //         fetch('http://127.0.0.1:8000/level7/')
-    //         .then(response => response.json())
-    //         .then(data => {
-    //             setlevel7(data)
-    //         }
-    //         )
-    //         fetch('http://127.0.0.1:8000/level8/')
-    //         .then(response => response.json())
-    //         .then(data => {
-    //             setlevel8(data)
-    //         }
-    //         )
-    //         fetch('http://127.0.0.1:8000/level9/')
-    //         .then(response => response.json())
-    //         .then(data => {
-    //             setlevel9(data)
-    //         }
-    //         )
-    //         fetch('http://127.0.0.1:8000/level10/')
-    //         .then(response => response.json())
-    //         .then(data => {
-    //             setlevel10(data)
-    //         }
-    //         )
-    //         fetch('http://127.0.0.1:8000/level11/')
-    //         .then(response => response.json())
-    //         .then(data => {
-    //             setlevel11(data)
-    //         } 
-    //         )
-    //         fetch('http://127.0.0.1:8000/level12/')
-    //         .then(response => response.json())
-    //         .then(data => {
-    //             setlevel12(data)
-    //             console.log(level12)
-    //         }
-    //         )
+            fetch('http://127.0.0.1:8000/level2/')
+            .then(response => response.json())
+            .then(data => {
+                setlevel2(data)
+            }
+            )
+            fetch('http://127.0.0.1:8000/level3/')
+            .then(response => response.json())
+            .then(data => {
+                setlevel3(data)
+            }
+            )
+            fetch('http://127.0.0.1:8000/level4/')
+            .then(response => response.json())
+            .then(data => {
+                setlevel4(data)
+            }
+            )
+            fetch('http://127.0.0.1:8000/level5/')
+            .then(response => response.json())
+            .then(data => {
+                setlevel5(data)
+            }
+            )
+            fetch('http://127.0.0.1:8000/level6/')
+            .then(response => response.json())
+            .then(data => {
+                setlevel6(data)
+            }
+            )
+            fetch('http://127.0.0.1:8000/level7/')
+            .then(response => response.json())
+            .then(data => {
+                setlevel7(data)
+            }
+            )
+            fetch('http://127.0.0.1:8000/level8/')
+            .then(response => response.json())
+            .then(data => {
+                setlevel8(data)
+            }
+            )
+            fetch('http://127.0.0.1:8000/level9/')
+            .then(response => response.json())
+            .then(data => {
+                setlevel9(data)
+            }
+            )
+            fetch('http://127.0.0.1:8000/level10/')
+            .then(response => response.json())
+            .then(data => {
+                setlevel10(data)
+            }
+            )
+            fetch('http://127.0.0.1:8000/level11/')
+            .then(response => response.json())
+            .then(data => {
+                setlevel11(data)
+            } 
+            )
+            fetch('http://127.0.0.1:8000/level12/')
+            .then(response => response.json())
+            .then(data => {
+                setlevel12(data)
+            }
+            )
             
         
-    // },[]);
+    }, []);
     // console.log(level1[0])
     // console.log(level2[0])
     // console.log(level3[0])
@@ -252,16 +230,25 @@ const Game = () =>{
     // console.log(level10[0])
     // console.log(level11[0])
     // console.log(level12[0])
-    // console.log(datas)
+
     
     // setdatas([level1[0], level2[0], level3[0],level4[0], level5[0],level6[0], level7[0], level8[0],level9[0], level10[0], level11[0], level12[0]])
-    console.log(data)
+    console.log(level1[0])
+    const finalarray = [level1[0], level2[0], level3[0],level4[0], level5[0],level6[0], level7[0], level8[0],level9[0], level10[0], level11[0], level12[0]]
+    console.log(finalarray)
 
-   
+    const initialcolor = {
+        option1color:'transparent',
+        option2color:'transparent',
+        option3color:'transparent',
+        option4color:'transparent'
+    }
+    const [gamelevel, setgamelevel] = useState(0)
+    const [color, setcolor] = useState(initialcolor)
     const changelevel = () =>{
         setgamelevel(gamelevel+1)
         setcolor(initialcolor)
-        setflag(data[gamelevel+1].answer)
+        setflag(finalarray[gamelevel+1].answer)
         console.log(gamelevel+1)
         setmoneybg(initialbg)
         if (gamelevel +1 === 0){
@@ -321,7 +308,7 @@ const Game = () =>{
 
     }
     const [moneybg, setmoneybg] = useState(initialbg)
-    const [flag, setflag] = useState(data[gamelevel].answer)
+    const [flag, setflag] = useState(finalarray[gamelevel].answer)
     return(
         <div className='game'>
             <div className='next' onClick={()=>{
@@ -355,21 +342,21 @@ const Game = () =>{
             <div className='bottom'>
                 
                 <div className='question'>
-                    <h1>{data[gamelevel].ques}</h1>
+                    <h1>{finalarray[gamelevel].ques}</h1>
                 </div>
                 <div className='options'>
                 <div className='optiontop'>
                     <h1 style={{'backgroundColor':color.option1color}} onClick={()=>{
-                        if (data[gamelevel].option1===data[gamelevel].answer){
+                        if (finalarray[gamelevel].option1===finalarray[gamelevel].answer){
                             setcolor({option1color:'green'})
-                            setflag(data[gamelevel].answer)
+                            setflag(finalarray[gamelevel].answer)
                 
                         }
                         else{
-                            if(flag===data[gamelevel].option2){
+                            if(flag===finalarray[gamelevel].option2){
                                 setcolor({option2color:'green',option1color:'red'})
                             }
-                            else if(flag===data[gamelevel].option3){
+                            else if(flag===finalarray[gamelevel].option3){
                                 setcolor({option3color:'green',option1color:'red'})
                             }
                             else{
@@ -378,17 +365,17 @@ const Game = () =>{
                             
                         }
                        
-                    }}><span>A: </span>{data[gamelevel].option1}</h1>
+                    }}><span>A: </span>{finalarray[gamelevel].option1}</h1>
                     <h1 onClick={()=>{
-                        if (data[gamelevel].option2===data[gamelevel].answer){
+                        if (finalarray[gamelevel].option2===finalarray[gamelevel].answer){
                             setcolor({option2color:'green'})
                 
                         }
                         else{
-                            if(flag===data[gamelevel].option1){
+                            if(flag===finalarray[gamelevel].option1){
                                 setcolor({option1color:'green',option2color:'red'})
                             }
-                            else if(flag===data[gamelevel].option3){
+                            else if(flag===finalarray[gamelevel].option3){
                                 setcolor({option3color:'green',option2color:'red'})
                             }
                             else{
@@ -397,19 +384,19 @@ const Game = () =>{
                             
                         }
                        
-                    }} style={{'backgroundColor':color.option2color}}><span>B: </span>{data[gamelevel].option2}</h1>
+                    }} style={{'backgroundColor':color.option2color}}><span>B: </span>{finalarray[gamelevel].option2}</h1>
                 </div>
                 <div className='optionbottom'>
                     <h1 style={{'backgroundColor':color.option3color}} onClick={()=>{
-                        if (data[gamelevel].option3===data[gamelevel].answer){
+                        if (finalarray[gamelevel].option3===finalarray[gamelevel].answer){
                             setcolor({option3color:'green'})
                 
                         }
                         else{
-                            if(flag===data[gamelevel].option1){
+                            if(flag===finalarray[gamelevel].option1){
                                 setcolor({option1color:'green',option3color:'red'})
                             }
-                            else if(flag===data[gamelevel].option2){
+                            else if(flag===finalarray[gamelevel].option2){
                                 setcolor({option2color:'green',option3color:'red'})
                             }
                             else{
@@ -417,17 +404,17 @@ const Game = () =>{
                             }
                         }
                        
-                    }}><span>C: </span>{data[gamelevel].option3}</h1>
+                    }}><span>C: </span>{finalarray[gamelevel].option3}</h1>
                     <h1 style={{'backgroundColor':color.option4color}} onClick={()=>{
-                        if (data[gamelevel].option4===data[gamelevel].answer){
+                        if (finalarray[gamelevel].option4===finalarray[gamelevel].answer){
                             setcolor({option4color:'green'})
                 
                         }
                         else{
-                            if(flag===data[gamelevel].option1){
+                            if(flag===finalarray[gamelevel].option1){
                                 setcolor({option1color:'green',option4color:'red'})
                             }
-                            else if(flag===data[gamelevel].option2){
+                            else if(flag===finalarray[gamelevel].option2){
                                 setcolor({option2color:'green',option4color:'red'})
                             }
                             else{
@@ -436,7 +423,7 @@ const Game = () =>{
 
                         }
                        
-                    }}><span>D: </span>{data[gamelevel].option4}</h1>
+                    }}><span>D: </span>{finalarray[gamelevel].option4}</h1>
                 </div>
                 </div>
             </div>
@@ -445,4 +432,4 @@ const Game = () =>{
 }
 
 
-export default Game;
+export default Game2;
