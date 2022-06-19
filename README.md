@@ -1,10 +1,10 @@
-# To Run Ko Banchha Hajarpati
+## To Run Ko Banchha Hajarpati
 
-## Pull the repo
+1. Pull the repo
 
-## CD to the folder containing yarn
+2. CD to the folder containing yarn
 
-## Run (yarn install)
+3. Run (yarn install)
 
-## Run (yarn start)
+4. Run (yarn start)
 
