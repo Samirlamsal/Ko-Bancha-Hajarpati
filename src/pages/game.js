@@ -154,12 +154,9 @@ const Game = () =>{
     }
     const [gamelevel, setgamelevel] = useState(0)
     const [color, setcolor] = useState(initialcolor)
-    const [rightans, setrightans] = useState(data[gamelevel].answer)
-
-    console.log(rightans)
+  
 
 
-    console.log(data)
     const THREE_DAYS_IN_MS = 60 * 1000;
     const NOW_IN_MS = new Date().getTime();
   

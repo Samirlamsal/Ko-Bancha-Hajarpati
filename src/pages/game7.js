@@ -357,6 +357,7 @@ const Game7 = () =>{
             <div className='next'>
                 <button onClick={()=>{
                 changelevel()
+                settimer(true)
             }}><h3><GrNext/></h3></button>
 
             </div>
@@ -390,6 +391,7 @@ const Game7 = () =>{
                 <div className='options'>
                 <div className='optiontop'>
                     <h1 style={{'backgroundColor':color.option1color}} onClick={()=>{
+                        settimer(false)
                         if (data[gamelevel].option1===data[gamelevel].answer){
                             setcolor({option1color:'green'})
                             setflag(data[gamelevel].answer)
@@ -410,6 +412,7 @@ const Game7 = () =>{
                        
                     }}><span>A: </span>{data[gamelevel].option1}</h1>
                     <h1 onClick={()=>{
+                        settimer(false)
                         if (data[gamelevel].option2===data[gamelevel].answer){
                             setcolor({option2color:'green'})
                 
@@ -431,6 +434,7 @@ const Game7 = () =>{
                 </div>
                 <div className='optionbottom'>
                     <h1 style={{'backgroundColor':color.option3color}} onClick={()=>{
+                        settimer(false)
                         if (data[gamelevel].option3===data[gamelevel].answer){
                             setcolor({option3color:'green'})
                 
@@ -449,6 +453,7 @@ const Game7 = () =>{
                        
                     }}><span>C: </span>{data[gamelevel].option3}</h1>
                     <h1 style={{'backgroundColor':color.option4color}} onClick={()=>{
+                        settimer(false)
                         if (data[gamelevel].option4===data[gamelevel].answer){
                             setcolor({option4color:'green'})
                 
