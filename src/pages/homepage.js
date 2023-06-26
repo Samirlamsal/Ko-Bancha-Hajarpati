@@ -54,7 +54,7 @@ const Homepage = () =>{
             </div>
             <div className='level'>
                 <div className='column'>
-                    <h1 style={{'color':'orange'}}>Rs 5000</h1>
+                    <h1 style={{'color':'orange'}}>Rs 50000</h1>
                     <h1>Rs 4500</h1>
                     <h1>Rs 4000</h1>
                     <h1 style={{'color':'orange'}}>Rs 3500</h1>
